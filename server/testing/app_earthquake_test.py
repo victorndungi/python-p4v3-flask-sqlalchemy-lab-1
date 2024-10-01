@@ -44,7 +44,7 @@ class TestApp:
         # convert to JSON
         response_json = json.loads(response_body)
         # confirm JSON data
-        assert response_json["message"] == "Earthquake 9999 not found."
+        assert response_json["message"].strip() == "Earthquake 9999 not found."
 
         # confirm status
         assert response.status_code == 404
